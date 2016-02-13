@@ -81,6 +81,7 @@
   ↳tags
 fileindex.txt
 fileindexer.py
+fileindexfileindex.txt
 Oooh
 ↳.DS_Store
 ↳Yaas
