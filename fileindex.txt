@@ -22,6 +22,8 @@
     ↳ HEAD
     ↳ refs
         ↳ heads
+            ↳ Command-Line-Ready
+            ↳ Make-Suitable-For-Command-Line
             ↳ master
             ↳ More-File-Types
             ↳ More-immersive-file-types
@@ -29,6 +31,8 @@
             ↳ origin
                 ↳ master
                 ↳ More-File-Types
+                ↳ More-immersive-file-types
+        ↳ stash
 ↳ objects
     ↳ .DS_Store
     ↳ 06
@@ -44,6 +48,7 @@
     ↳ 21
         ↳ 3a708e617d3fa799458f089fae88da5ed62d41
     ↳ 26
+        ↳ 3d828e7403bf284418a04bb53f2ffe435ded53
         ↳ dd36fae5a608215ca38a5630da5029626d2e4c
     ↳ 28
         ↳ 0282a1cb43f535189002a827c2417c7b83a766
@@ -52,8 +57,13 @@
         ↳ b51dce0d000c51290ba1af84125b47c66c6251
     ↳ 43
         ↳ 1b817a49f78c68be2326d60ba13baef0ac2d20
+        ↳ ef19764a4adec888c6ba94079ff89fa738a628
+    ↳ 4b
+        ↳ 57bad3d8b8c521cb0d4020e86f7338e0d3f71e
     ↳ 51
         ↳ 14c36d66042faba443b791527ca3029d84f1e7
+    ↳ 55
+        ↳ 280ad85ef02f83484f0e3156f580cceabdcb37
     ↳ 57
         ↳ b524889f9b39eb7ac8db1bf895b3e2e5ec4531
     ↳ 5d
@@ -65,12 +75,20 @@
         ↳ f71dd6d74c910953f38eef819015fa2c90a5c9
     ↳ 68
         ↳ 76502dddfa62b303538709b843169d2420febc
+    ↳ 69
+        ↳ a2521a80572ee0b9a0a971dbc5d25345a1baed
     ↳ 70
         ↳ 61de2af224cae980cd535e6a6a5c8e7daac98a
+    ↳ 73
+        ↳ 62a9ae0013698df55b605f5fdb905d14eb8f8e
     ↳ 74
         ↳ 875b836fececd2c1e55e4fc20a487e561c597f
+    ↳ 78
+        ↳ 97b50665b09b5530cb64e951c86e477351a155
     ↳ 7d
         ↳ 9b107ee9306fabdac7e9fd0331ea82397ae590
+    ↳ 83
+        ↳ 6e11d373ca7bf2a2208927b98dc932399460ca
     ↳ 84
         ↳ 871eb4df90f383a462199bf2c38edcd5f4cb99
     ↳ 86
@@ -78,13 +96,19 @@
         ↳ b280bfc7b6d2359800dfb3ba7521d1509f09d5
     ↳ 89
         ↳ 3b35c92cb6f2ec50a0b22408032738e79c86fe
+    ↳ 8c
+        ↳ eefc9e9d3c2b23d09913b497249b092eb22c1f
     ↳ 8d
         ↳ ac15db4bafb4154d2cbae70a2510d646c8f78f
+    ↳ 94
+        ↳ 9cbc049b7dc2ddf39cbf922555c7d7f1c3a1ea
     ↳ 96
         ↳ 22b53d1d4dff9ae552642cf8727084fbd1197a
     ↳ 97
         ↳ 5583280148d255aac4e123748e046a30236bdd
         ↳ b999d262d8f0f80fec08cffff6564c6b78647d
+    ↳ 99
+        ↳ a326338e73b152e8f040a2bd9ba264d274f167
     ↳ 9b
         ↳ 18c26c9ab00997d3cfc8e84ff82acc8f0d09a0
     ↳ 9d
@@ -117,6 +141,9 @@
         ↳ 0c17da3b56400cc548daf351cae6841d94b89c
     ↳ d8
         ↳ 7bb2ec4cc9157fb02ef613394c7816a9b9bfa4
+        ↳ f824e7d321ca403a0e4312d7b9c78f789f6072
+    ↳ d9
+        ↳ 49d993d4c5264c90b8185db9d77b5dda7d8f56
     ↳ df
         ↳ ebf7af90ab476611d927807e94508493f7dbf3
     ↳ e3
@@ -132,6 +159,8 @@
 ↳ ORIG_HEAD
 ↳ refs
     ↳ heads
+        ↳ Command-Line-Ready
+        ↳ Make-Suitable-For-Command-Line
         ↳ master
         ↳ More-File-Types
         ↳ More-immersive-file-types
@@ -139,6 +168,8 @@
         ↳ origin
             ↳ master
             ↳ More-File-Types
+            ↳ More-immersive-file-types
+    ↳ stash
     ↳ tags
 fileindex.rtf
 fileindex.txt

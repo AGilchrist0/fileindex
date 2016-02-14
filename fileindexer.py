@@ -2,6 +2,13 @@
 # coding=<UTF-8>
 import os
 import codecs
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('filename', nargs='?', help='Chooses file name to output to.', default='fileindex')
+parser.add_argument('fileformat', help='Chooses file type to output to.', nargs='?', choices=('txt', 'rtf'), default='txt')
+parser.add_argument('location', help='Chooses file location to index.', nargs='?', default=os.getcwd())
+args = parser.parse_args()
 
 class FileSorter:
     def sort_files_hyperlink(location):
@@ -31,10 +38,11 @@ class FileSorter:
             file_list.append(next_line)
         return file_list
 
-    def write_txt(file_list):
+    def write_txt(file_name, location):
+        file_list = FileSorter.sort_files_name(location)
         content = '*** SORTED FILES ***'
         content += FileSorter.parse_txt(file_list,'')
-        FileSorter.write('fileindex','.txt',content)
+        FileSorter.write(file_name,'.txt',content)
 
     def parse_txt(file_list,tabbing):
         content = ''
@@ -62,11 +70,13 @@ class FileSorter:
                 else: content += item
         return content
 
-    def write_rtf(file_list,file_list_hyperlink):
+    def write_rtf(file_name,location):
+        file_list = FileSorter.sort_files_name(location)
+        file_list_hyperlink = FileSorter.sort_files_hyperlink(location)
         content = '{\\rtf1\\ansi\\deff0\n***SORTED FILES***'
         content += FileSorter.parse_rtf(file_list,file_list_hyperlink,'')
         content += '}'
-        FileSorter.write('fileindex','.rtf',content)
+        FileSorter.write(file_name,'.rtf',content)
 
     def parse_rtf(file_list,file_list_hyperlink,tabbing):
         content = ''
@@ -107,6 +117,7 @@ class FileSorter:
         with codecs.open(file,'w',encoding='utf8') as text_file:
             text_file.write(content)
 
-location = './'
-FileSorter.write_txt(FileSorter.sort_files_name(location))
-FileSorter.write_rtf(FileSorter.sort_files_name(location),FileSorter.sort_files_hyperlink(location))
+if args.fileformat == 'txt':
+    FileSorter.write_txt(args.filename, args.location)
+elif args.fileformat == 'rtf':
+    FileSorter.write_rtf(args.filename, args.location)
