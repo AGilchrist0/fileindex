@@ -2,7 +2,6 @@
 # coding=<UTF-8>
 import os
 import codecs
-import webbrowser
 
 class FileSorter:
     def sort_files():
