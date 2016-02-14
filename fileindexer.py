@@ -47,7 +47,7 @@ class FileSorter:
 
     def write(file_name,file_extension,content):
         file = file_name+file_extension
-        with codecs.open('fileindex'+file,'w',encoding='utf8') as text_file:
+        with codecs.open(file,'w',encoding='utf8') as text_file:
             text_file.write(content)
 
 '''def sort_files(tabbing):
