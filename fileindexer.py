@@ -4,12 +4,12 @@ import os
 import codecs
 
 class FileSorter:
-    def sort_files_hyperlink():
+    def sort_files_hyperlink(location):
         hyperlink_list = []
         for item in os.listdir():
             if os.path.isdir(item):
                 os.chdir(os.getcwd()+'/'+item+'/')
-                next_line = (FileSorter.sort_files_hyperlink())
+                next_line = FileSorter.sort_files_hyperlink(os.getcwd())
                 next_line.insert(0,'file://'+os.getcwd()+'/'+item)
                 os.chdir('..')
             else:
@@ -17,12 +17,13 @@ class FileSorter:
             hyperlink_list.append(next_line)
         return hyperlink_list
 
-    def sort_files_name():
+    def sort_files_name(location):
+        os.chdir(location)
         file_list = []
         for item in os.listdir():
             if os.path.isdir(item):
                 os.chdir(os.getcwd()+'/'+item+'/')
-                next_line = (FileSorter.sort_files_name())
+                next_line = FileSorter.sort_files_name(os.getcwd())
                 next_line.insert(0,item)
                 os.chdir('..')
             else:
@@ -106,7 +107,6 @@ class FileSorter:
         with codecs.open(file,'w',encoding='utf8') as text_file:
             text_file.write(content)
 
-#file_list = FileSorter.sort_files_name()
-#FileSorter.write_rtf(file_list)
-FileSorter.write_txt(FileSorter.sort_files_name())
-FileSorter.write_rtf(FileSorter.sort_files_name(),FileSorter.sort_files_hyperlink())
+location = './'
+FileSorter.write_txt(FileSorter.sort_files_name(location))
+FileSorter.write_rtf(FileSorter.sort_files_name(location),FileSorter.sort_files_hyperlink(location))
