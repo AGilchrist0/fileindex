@@ -1,6 +1,7 @@
 *** SORTED FILES ***
 .DS_Store
 .git
+↳ .DS_Store
 ↳ COMMIT_EDITMSG
 ↳ config
 ↳ description
@@ -22,6 +23,7 @@
         ↳ heads
             ↳ master
             ↳ More-File-Types
+            ↳ More-immersive-file-types
         ↳ remotes
             ↳ origin
                 ↳ master
@@ -29,14 +31,20 @@
 ↳ objects
     ↳ 06
         ↳ fb1e5791012e10cd2dff7391ac057c5848123f
+    ↳ 0e
+        ↳ fb841f6ceb3a47ac156b67a75da7e10ab4f3d5
     ↳ 1a
         ↳ efd2ae9a6b6af971f24f247e52865468639df1
+    ↳ 1d
+        ↳ b5567e951b55ae586ecdb1954bc1e539dbab25
     ↳ 21
         ↳ 3a708e617d3fa799458f089fae88da5ed62d41
     ↳ 26
         ↳ dd36fae5a608215ca38a5630da5029626d2e4c
     ↳ 28
         ↳ 0282a1cb43f535189002a827c2417c7b83a766
+    ↳ 31
+        ↳ 3f8726517add44378e6dd9224b5a5b8d607303
     ↳ 43
         ↳ 1b817a49f78c68be2326d60ba13baef0ac2d20
     ↳ 51
@@ -46,15 +54,21 @@
     ↳ 62
         ↳ 1127330e0c1d56746998004bcd13e0027adb49
         ↳ 4b30bc6904d55005e2dbbcfd5bb49c4cbfc0f9
+    ↳ 67
+        ↳ f71dd6d74c910953f38eef819015fa2c90a5c9
     ↳ 70
         ↳ 61de2af224cae980cd535e6a6a5c8e7daac98a
     ↳ 74
         ↳ 875b836fececd2c1e55e4fc20a487e561c597f
     ↳ 7d
         ↳ 9b107ee9306fabdac7e9fd0331ea82397ae590
+    ↳ 84
+        ↳ 871eb4df90f383a462199bf2c38edcd5f4cb99
     ↳ 86
         ↳ a8053214811de1627043a2d4e6b75dc6464b72
         ↳ b280bfc7b6d2359800dfb3ba7521d1509f09d5
+    ↳ 8d
+        ↳ ac15db4bafb4154d2cbae70a2510d646c8f78f
     ↳ 96
         ↳ 22b53d1d4dff9ae552642cf8727084fbd1197a
     ↳ 97
@@ -62,6 +76,8 @@
         ↳ b999d262d8f0f80fec08cffff6564c6b78647d
     ↳ 9b
         ↳ 18c26c9ab00997d3cfc8e84ff82acc8f0d09a0
+    ↳ 9d
+        ↳ 8f434024245eb3227084f5a5f19fea64086be8
     ↳ a1
         ↳ 9a82ab83ee468d53fa9f7f0f3063434b7eac28
     ↳ a7
@@ -72,6 +88,11 @@
         ↳ e6ad395ac2b0d20f8d83eeb1fb1880e6f87b59
     ↳ b8
         ↳ 420d314a434a7571951c287c3a5692a40139a6
+        ↳ b9e7ce1f7711701bb29a32a773c9e912816a06
+    ↳ ba
+        ↳ aacae93d49fdf20f3f05e1da6219dd338b28c2
+    ↳ bb
+        ↳ 8f603b5096699732281de44a7590aceca5f83b
     ↳ d0
         ↳ 0c17da3b56400cc548daf351cae6841d94b89c
     ↳ d8
@@ -88,13 +109,17 @@
         ↳ e38d8f670b4d54f0d60ed801e69b31053c2201
     ↳ info
     ↳ pack
+↳ ORIG_HEAD
 ↳ refs
     ↳ heads
         ↳ master
         ↳ More-File-Types
+        ↳ More-immersive-file-types
     ↳ remotes
         ↳ origin
             ↳ master
             ↳ More-File-Types
     ↳ tags
+fileindex.rtf
+fileindex.txt
 fileindexer.py
