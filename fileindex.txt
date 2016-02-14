@@ -1,59 +1,100 @@
-*** File Contents ***
+*** SORTED FILES ***
 .DS_Store
 .git
-    COMMIT_EDITMSG
-    config
-    description
-    HEAD
-    hooks
-        README.sample
-    index
-    info
-        exclude
-    logs
-        HEAD
-        refs
-            heads
-                master
-    objects
-        1a
-            efd2ae9a6b6af971f24f247e52865468639df1
-        26
-            dd36fae5a608215ca38a5630da5029626d2e4c
-        43
-            1b817a49f78c68be2326d60ba13baef0ac2d20
-        51
-            14c36d66042faba443b791527ca3029d84f1e7
-        62
-            1127330e0c1d56746998004bcd13e0027adb49
-        70
-            61de2af224cae980cd535e6a6a5c8e7daac98a
-        7d
-            9b107ee9306fabdac7e9fd0331ea82397ae590
-        86
-            a8053214811de1627043a2d4e6b75dc6464b72
-        96
-            22b53d1d4dff9ae552642cf8727084fbd1197a
-        b0
-            f1e08bd0594a6097cc7c30ffbb0198698f371e
-        b8
-            420d314a434a7571951c287c3a5692a40139a6
-        e3
-            bc623f9adeedbdf04960a08817ad50c13c1e7c
-        e7
-            69ab9473afa38bee9aaeedcfc08ee4adbcc372
-        f8
-            e38d8f670b4d54f0d60ed801e69b31053c2201
-        info
-        pack
-    refs
-        heads
-            master
-        tags
-fileindex.txt
+↳ COMMIT_EDITMSG
+↳ config
+↳ description
+↳ FETCH_HEAD
+↳ HEAD
+↳ hooks
+    ↳ README.sample
+↳ index
+↳ info
+    ↳ exclude
+↳ lfs
+    ↳ objects
+        ↳ logs
+    ↳ tmp
+        ↳ objects
+↳ logs
+    ↳ HEAD
+    ↳ refs
+        ↳ heads
+            ↳ master
+            ↳ More-File-Types
+        ↳ remotes
+            ↳ origin
+                ↳ master
+                ↳ More-File-Types
+↳ objects
+    ↳ 06
+        ↳ fb1e5791012e10cd2dff7391ac057c5848123f
+    ↳ 1a
+        ↳ efd2ae9a6b6af971f24f247e52865468639df1
+    ↳ 21
+        ↳ 3a708e617d3fa799458f089fae88da5ed62d41
+    ↳ 26
+        ↳ dd36fae5a608215ca38a5630da5029626d2e4c
+    ↳ 28
+        ↳ 0282a1cb43f535189002a827c2417c7b83a766
+    ↳ 43
+        ↳ 1b817a49f78c68be2326d60ba13baef0ac2d20
+    ↳ 51
+        ↳ 14c36d66042faba443b791527ca3029d84f1e7
+    ↳ 5d
+        ↳ 4597cc13f293c48f94dd1b7524db52f87a95a2
+    ↳ 62
+        ↳ 1127330e0c1d56746998004bcd13e0027adb49
+        ↳ 4b30bc6904d55005e2dbbcfd5bb49c4cbfc0f9
+    ↳ 70
+        ↳ 61de2af224cae980cd535e6a6a5c8e7daac98a
+    ↳ 74
+        ↳ 875b836fececd2c1e55e4fc20a487e561c597f
+    ↳ 7d
+        ↳ 9b107ee9306fabdac7e9fd0331ea82397ae590
+    ↳ 86
+        ↳ a8053214811de1627043a2d4e6b75dc6464b72
+        ↳ b280bfc7b6d2359800dfb3ba7521d1509f09d5
+    ↳ 96
+        ↳ 22b53d1d4dff9ae552642cf8727084fbd1197a
+    ↳ 97
+        ↳ 5583280148d255aac4e123748e046a30236bdd
+        ↳ b999d262d8f0f80fec08cffff6564c6b78647d
+    ↳ 9b
+        ↳ 18c26c9ab00997d3cfc8e84ff82acc8f0d09a0
+    ↳ a1
+        ↳ 9a82ab83ee468d53fa9f7f0f3063434b7eac28
+    ↳ a7
+        ↳ e6a2393c27b2b3f2e80f1af7f368e7b7291452
+    ↳ b0
+        ↳ f1e08bd0594a6097cc7c30ffbb0198698f371e
+    ↳ b7
+        ↳ e6ad395ac2b0d20f8d83eeb1fb1880e6f87b59
+    ↳ b8
+        ↳ 420d314a434a7571951c287c3a5692a40139a6
+    ↳ d0
+        ↳ 0c17da3b56400cc548daf351cae6841d94b89c
+    ↳ d8
+        ↳ 7bb2ec4cc9157fb02ef613394c7816a9b9bfa4
+    ↳ df
+        ↳ ebf7af90ab476611d927807e94508493f7dbf3
+    ↳ e3
+        ↳ bc623f9adeedbdf04960a08817ad50c13c1e7c
+    ↳ e7
+        ↳ 69ab9473afa38bee9aaeedcfc08ee4adbcc372
+    ↳ e8
+        ↳ ef014abfebd24173721c17d1ebc815c87c0dde
+    ↳ f8
+        ↳ e38d8f670b4d54f0d60ed801e69b31053c2201
+    ↳ info
+    ↳ pack
+↳ refs
+    ↳ heads
+        ↳ master
+        ↳ More-File-Types
+    ↳ remotes
+        ↳ origin
+            ↳ master
+            ↳ More-File-Types
+    ↳ tags
 fileindexer.py
-Oooh
-    .DS_Store
-    Yaas
-        Screen Shot 2016-02-12 at 20.03.29.png
-        Screen Shot 2016-02-12 at 20.03.39.png
