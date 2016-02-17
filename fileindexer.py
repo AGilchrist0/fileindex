@@ -23,7 +23,7 @@ def sort_files_hyperlink(location):
         if os.path.isdir(item):
             os.chdir(os.getcwd()+'/'+item+'/')
             next_line = sort_files_hyperlink(os.getcwd())
-            next_line.insert(0,'file://'+os.getcwd()+'/'+item)
+            next_line.insert(0, 'file://'+os.getcwd()+'/'+item)
             os.chdir('..')
         else:
             next_line = ['file://'+os.getcwd()+'/'+item]
@@ -57,7 +57,7 @@ def write_txt(file_name, location):
     content = '*** SORTED FILES ***'
     content += parse_txt(file_list,'')
     log.info('*** txt parsed ***')
-    write(file_name,'.txt',content)
+    write(file_name, '.txt', content)
 
 def parse_txt(file_list,tabbing):
     content = ''
@@ -74,14 +74,14 @@ def parse_txt(file_list,tabbing):
             for things in item:
                 if x != 0: in_item.append(item[x])
                 x += 1
-            content += parse_txt(in_item,tabbing)
+            content += parse_txt(in_item, tabbing)
             tabbing = tabbing[:-4]
         else:
             if len(tabbing) > 0:
                 content += '\n' + tabbing[:-4] + '- '
             else:
                 content += '\n' + tabbing
-            if isinstance(item,list): content += item[0]
+            if isinstance(item, list): content += item[0]
             else: content += item
     return content
 
@@ -90,17 +90,17 @@ def write_rtf(file_name,location):
     log.info('*** Files sorted ***')
     file_list_hyperlink = sort_files_hyperlink(location)
     content = '{\\rtf1\\ansi\\deff0\n***SORTED FILES***'
-    content += parse_rtf(file_list,file_list_hyperlink,'')
+    content += parse_rtf(file_list, file_list_hyperlink, '')
     content += '}'
     log.info('*** rtf parsed ***')
-    write(file_name,'.rtf',content)
+    write(file_name, '.rtf', content)
 
 def parse_rtf(file_list,file_list_hyperlink,tabbing):
     content = ''
     file_list_hyperlink = file_list_hyperlink
     y = 0
     for item in file_list:
-        if len(item) > 1 and isinstance(item,list):
+        if len(item) > 1 and isinstance(item, list):
             if len(tabbing) > 0:
                 content += '\\line\n' + tabbing#[:-4] + '- '
             else:
@@ -115,7 +115,7 @@ def parse_rtf(file_list,file_list_hyperlink,tabbing):
                     in_item.append(item[x])
                     in_item_hyperlink.append(file_list_hyperlink[y][x])
                 x += 1
-            content += parse_rtf(in_item,in_item_hyperlink,tabbing)
+            content += parse_rtf(in_item, in_item_hyperlink, tabbing)
             tabbing = tabbing[:-4]
         else:
             if len(tabbing) > 0:
@@ -129,15 +129,15 @@ def parse_rtf(file_list,file_list_hyperlink,tabbing):
         y += 1
     return content
 
-def write_md(file_name,location):
+def write_md(file_name, location):
     file_list = sort_files_name(location)
     content = ('# Files Sorted #')
     file_list_hyperlink = sort_files_hyperlink(location)
-    content += parse_md(file_list,file_list_hyperlink,' * ')
+    content += parse_md(file_list,file_list_hyperlink, ' * ')
     log.info('*** Markdown parsed ***')
-    write(file_name,'.md',content)
+    write(file_name, '.md', content)
 
-def parse_md(file_list,file_list_hyperlink,tabbing):
+def parse_md(file_list, file_list_hyperlink,tabbing):
     content = ''
     file_list_hyperlink = file_list_hyperlink
     y = 0
@@ -171,9 +171,9 @@ def parse_md(file_list,file_list_hyperlink,tabbing):
         y += 1
     return content
 
-def write(file_name,file_extension,content):
+def write(file_name, file_extension, content):
     file = file_name+file_extension
-    with codecs.open(file,'w',encoding='utf8') as text_file:
+    with codecs.open(file,'w', encoding='utf8') as text_file:
         text_file.write(content)
         text_file.write("\n")
     log.info(file + ' created.')
