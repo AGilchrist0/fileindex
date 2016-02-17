@@ -10,6 +10,7 @@ parser.add_argument('fileformat', help='Chooses file type to output to.', nargs=
 parser.add_argument('location', help='Chooses file location to index.', nargs='?', default='./')
 parser.add_argument('-v', '--verbose', help='Makes program more verbose.', action='store_true')
 parser.add_argument('-a', '--allfiles', help='Index all files, including dotfiles.', action='store_true')
+parser.add_argument('-s', '--stdout', help='Print the output, rather than writing to a file', action='store_true')
 args = parser.parse_args()
 
 def sort_files_hyperlink(location):
@@ -56,6 +57,7 @@ def write_txt(file_name, location):
     log.info('*** Files sorted ***')
     content = '*** SORTED FILES ***'
     content += parse_txt(file_list,'')
+    content += "\n"
     log.info('*** txt parsed ***')
     write(file_name, '.txt', content)
 
@@ -134,6 +136,7 @@ def write_md(file_name, location):
     content = ('# Files Sorted #')
     file_list_hyperlink = sort_files_hyperlink(location)
     content += parse_md(file_list,file_list_hyperlink, ' * ')
+    content += "\n"
     log.info('*** Markdown parsed ***')
     write(file_name, '.md', content)
 
@@ -171,11 +174,18 @@ def parse_md(file_list, file_list_hyperlink,tabbing):
         y += 1
     return content
 
+def write_stdout(location):
+    file_list = sort_files_name(location)
+    log.info('*** Files sorted ***')
+    content = '*** SORTED FILES ***'
+    content += parse_txt(file_list, '')
+    log.info('*** txt parsed ***')
+    print(content)
+
 def write(file_name, file_extension, content):
     file = file_name+file_extension
     with codecs.open(file,'w', encoding='utf8') as text_file:
         text_file.write(content)
-        text_file.write("\n")
     log.info(file + ' created.')
 
 if args.verbose:
@@ -192,7 +202,9 @@ except OSError:
     log.error('File Location doesn\'t exist.')
     raise SystemExit
 
-if args.fileformat == 'txt':
+if args.stdout:
+    write_stdout(args.location)
+elif args.fileformat == 'txt':
     write_txt(args.filename, args.location)
 elif args.fileformat == 'rtf':
     write_rtf(args.filename, args.location)
