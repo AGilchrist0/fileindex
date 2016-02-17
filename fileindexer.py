@@ -9,11 +9,17 @@ parser.add_argument('filename', nargs='?', help='Chooses file name to output to.
 parser.add_argument('fileformat', help='Chooses file type to output to.', nargs='?', choices=('txt', 'rtf', 'md'), default='txt')
 parser.add_argument('location', help='Chooses file location to index.', nargs='?', default='./')
 parser.add_argument('-v', '--verbose', help='Makes program more verbose.', action='store_true')
+parser.add_argument('-a', '--allfiles', help='Index all files, including dotfiles.', action='store_true')
 args = parser.parse_args()
 
 def sort_files_hyperlink(location):
+    include_dotfiles = args.allfiles
     hyperlink_list = []
     for item in os.listdir(os.getcwd()):
+        # Exclude dotfiles by removing all files that begin with '.'
+        if not include_dotfiles:
+            if item[0] == '.':
+                continue
         if os.path.isdir(item):
             os.chdir(os.getcwd()+'/'+item+'/')
             next_line = sort_files_hyperlink(os.getcwd())
@@ -27,8 +33,13 @@ def sort_files_hyperlink(location):
 
 def sort_files_name(location):
     os.chdir(location)
+    include_dotfiles = args.allfiles
     file_list = []
     for item in os.listdir(os.getcwd()):
+        # Exclude dotfiles by removing all files that begin with '.'
+        if not include_dotfiles:
+            if item[0] == '.':
+                continue
         if os.path.isdir(item):
             os.chdir(os.getcwd()+'/'+item+'/')
             next_line = sort_files_name(os.getcwd())
